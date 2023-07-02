@@ -8,7 +8,7 @@ function validateName(){
         document.getElementById("message1").style.color="green"
         return true
     }else{
-        document.getElementById("message1").innerHTML="fail"
+        document.getElementById("message1").innerHTML="Nope.Try again"
         document.getElementById("message1").style.color="red"
         return false
         
@@ -23,7 +23,7 @@ if(reg.test(mnum)){
     document.getElementById("message2").style.color="green"
     return true
 }else{
-    document.getElementById("message2").innerHTML="fail"
+    document.getElementById("message2").innerHTML="Opps,somthing has gone wrong"
     document.getElementById("message2").style.color="red"
     return false
 }
@@ -38,7 +38,7 @@ function validateEmail() {
         document.getElementById("message3").style.color = "green"
         return true
     } else {
-        document.getElementById("message3").innerHTML = "fail"
+        document.getElementById("message3").innerHTML = "Please enter a valid email address"
         document.getElementById("message3").style.color = "red"
         return false
     }
