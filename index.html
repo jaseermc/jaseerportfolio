@@ -15,6 +15,36 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container{
+  border-radius: 5px;
+  background-color: #151010;
+  padding: 20px;
+}
 </style>
 <body class="w3-black">
 
@@ -22,7 +52,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <!-- <img src="/w3images/avatar_smoke.jpg" style="width:100%"> -->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -188,23 +218,27 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
       <p> -->
+      <div class="container">
         <form action="https://script.google.com/macros/s/AKfycbwNtY03L-nQfqjg8vbu44qHRcWC8TknGB9DCYZJY8wGjJk5_4iCXBHhCMOHyR6YwcNExw/exec" method="post" onsubmit=" return validateAllFields()">
-          <label for="">enter your name</label>
+          <div class="row">
+          <label for="">enter your name</label><br>
           <input type="text" id="name" value="" placeholder="Enter your Name" name="full name" onkeyup="validateName()">
           <p id="message1"></p>
 
-          <label for="">Enter your Mobile Number</label>
+          <label for="">Enter your Mobile Number</label><br>
           <input type="text" id="mnum" name="mnum" placeholder="Mobile Number" onblur="validateNumber()">
           <p id="message2"></p>
 
-          <label for="">enter your email</label>
+          <label for="">enter your email</label><br>
           <input type="text" id="email" name="email" placeholder="Email" onblur="validateEmail()">
           <p id="message3"></p>
 
 
           <input type="submit">
+         </div>
 
         </form>
+      </div>
 
 
         
